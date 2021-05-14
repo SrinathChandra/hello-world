@@ -15,9 +15,6 @@ jobs:
 
         echo "::set-output name=git_pr_sha::${GIT_PR_SHA}"
         echo "::set-output name=git_pr_sha_short::${GIT_PR_SHA_SHORT}"
-    outputs:
-      git_pr_sha: ${{ steps.identify.outputs.git_pr_sha }}
-      git_pr_sha_short: ${{ steps.identify.outputs.git_pr_sha_short }}
 
   second-job:
     needs: first-job
